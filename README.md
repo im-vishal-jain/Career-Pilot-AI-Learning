@@ -3,30 +3,30 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,18&height=180&section=header&text=Career%20Copilot%20AI&fontSize=52&fontColor=ffffff&fontAlignY=38&animation=fadeIn" width="100%" alt="Career Copilot AI header"/>
 
 <a href="https://github.com/your-username/career-copilot-ai">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=900&color=6366F1&center=true&vCenter=true&width=860&height=60&lines=Your+AI-Powered+Career+Mentor;Smart+Resume+Coach+%26+ATS+Analyzer;Interview+%26+Placement+Preparation+Assistant;From+Campus+to+Career%2C+Faster+%F0%9F%9A%80" alt="Typing animation"/>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=900&color=6366F1&center=true&vCenter=true&width=860&height=60&lines=Your+AI-Powered+Career+Mentor;Smart+Resume+Coach+%26+ATS+Analyzer;Interview+%26+Placement+Preparation+Assistant;Built+with+Python+%F0%9F%90%8D+and+AI+%F0%9F%9A%80" alt="Typing animation"/>
 </a>
 
 <br/><br/>
 
 **Your AI-Powered Career Mentor, Resume Coach, and Placement Preparation Assistant.**
 
-Build ATS-friendly resumes, master interviews, close skill gaps, and land your dream role, all in one intelligent platform.
+Build ATS-friendly resumes, master interviews, close skill gaps, and land your dream role, all in one intelligent Python-powered platform.
 
 <br/>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-6366F1?style=for-the-badge)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
 [![Version](https://img.shields.io/badge/Version-1.0.0-7C3AED?style=for-the-badge)](https://github.com/your-username/career-copilot-ai/releases)
 [![Build](https://img.shields.io/github/actions/workflow/status/your-username/career-copilot-ai/ci.yml?style=for-the-badge&logo=githubactions&logoColor=white&color=3B82F6)](https://github.com/your-username/career-copilot-ai/actions)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-3B82F6?style=for-the-badge)](CONTRIBUTING.md)
-[![Open Source](https://img.shields.io/badge/Open%20Source-%E2%9D%A4-8B5CF6?style=for-the-badge)](https://github.com/your-username/career-copilot-ai)
 
-[![React](https://img.shields.io/badge/React-0F172A?style=flat-square&logo=react&logoColor=61DAFB)](https://react.dev)
-[![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-38BDF8?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
-[![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)](https://nodejs.org)
-[![Express](https://img.shields.io/badge/Express-111827?style=flat-square&logo=express&logoColor=white)](https://expressjs.com)
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://streamlit.io)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)](https://www.postgresql.org)
+[![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=flat-square&logo=sqlalchemy&logoColor=white)](https://www.sqlalchemy.org)
 [![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)](https://openai.com)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)](https://scikit-learn.org)
+[![spaCy](https://img.shields.io/badge/spaCy-09A3D5?style=flat-square&logo=spacy&logoColor=white)](https://spacy.io)
 
 <br/>
 
@@ -57,7 +57,7 @@ Build ATS-friendly resumes, master interviews, close skill gaps, and land your d
 
 ## 🌟 Overview
 
-**Career Copilot AI** is an intelligent career guidance platform for **students, job seekers, and professionals**. It combines large language models, NLP, and machine learning to deliver personalized, actionable career support, from your first resume to your next promotion.
+**Career Copilot AI** is an intelligent career guidance platform for **students, job seekers, and professionals**. Built end-to-end in **Python**, it combines large language models, NLP, and machine learning to deliver personalized, actionable career support, from your first resume to your next promotion.
 
 <div align="center">
 
@@ -124,8 +124,8 @@ Build ATS-friendly resumes, master interviews, close skill gaps, and land your d
 <br/>
 
 - **LLM layer (OpenAI API):** Generates roadmaps, rewrites, interview questions, and chatbot responses.
-- **NLP layer:** Extracts skills, entities, and keywords from resumes and job descriptions.
-- **ML layer:** Powers ATS scoring, skill-gap matching, and job/internship ranking.
+- **NLP layer (spaCy):** Extracts skills, entities, and keywords from resumes and job descriptions.
+- **ML layer (scikit-learn):** Powers ATS scoring (TF-IDF + cosine similarity), skill-gap matching, and job/internship ranking.
 - **Personalization:** User history, goals, and performance continuously refine recommendations.
 
 </details>
@@ -140,16 +140,16 @@ Build ATS-friendly resumes, master interviews, close skill gaps, and land your d
 flowchart TB
     U(["👤 User"]) --> FE
 
-    subgraph FE["🖥️ Frontend  ·  React + Vite + Tailwind"]
+    subgraph FE["🖥️ Frontend  ·  Streamlit"]
         UI["Dashboard & UI"]
         RB["Resume Tools"]
         MI["Mock Interview"]
         CH["Career Chatbot"]
     end
 
-    FE -->|"REST API"| API
+    FE -->|"HTTP / REST"| API
 
-    subgraph BE["⚙️ Backend  ·  Node.js + Express"]
+    subgraph BE["⚙️ Backend  ·  FastAPI (Python)"]
         API["API Gateway"]
         AUTH["Auth & Sessions"]
         RES["Resume Service"]
@@ -160,8 +160,8 @@ flowchart TB
 
     subgraph AI["🤖 AI Layer"]
         LLM["OpenAI API"]
-        NLP["NLP Pipeline"]
-        ML["ML Models"]
+        NLP["spaCy NLP Pipeline"]
+        ML["scikit-learn Models"]
     end
 
     DB[("🗄️ PostgreSQL")]
@@ -189,9 +189,9 @@ flowchart TB
 sequenceDiagram
     autonumber
     actor User
-    participant UI as React Client
-    participant API as Express API
-    participant NLP as NLP Pipeline
+    participant UI as Streamlit UI
+    participant API as FastAPI
+    participant NLP as spaCy Pipeline
     participant ML as ML Scoring
     participant LLM as OpenAI API
     participant DB as PostgreSQL
@@ -252,10 +252,10 @@ erDiagram
 
 | Layer | Technologies |
 |:---:|:---|
-| 🎨 **Frontend** | ![React](https://img.shields.io/badge/-React-0F172A?logo=react&logoColor=61DAFB) ![Vite](https://img.shields.io/badge/-Vite-646CFF?logo=vite&logoColor=white) ![Tailwind](https://img.shields.io/badge/-Tailwind_CSS-38BDF8?logo=tailwindcss&logoColor=white) |
-| ⚙️ **Backend** | ![Node](https://img.shields.io/badge/-Node.js-339933?logo=nodedotjs&logoColor=white) ![Express](https://img.shields.io/badge/-Express.js-111827?logo=express&logoColor=white) |
-| 🗄️ **Database** | ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?logo=postgresql&logoColor=white) |
-| 🤖 **AI / ML** | ![OpenAI](https://img.shields.io/badge/-OpenAI_API-412991?logo=openai&logoColor=white) ![NLP](https://img.shields.io/badge/-NLP-7C3AED) ![ML](https://img.shields.io/badge/-Machine_Learning-6366F1) |
+| 🎨 **Frontend** | ![Streamlit](https://img.shields.io/badge/-Streamlit-FF4B4B?logo=streamlit&logoColor=white) ![Plotly](https://img.shields.io/badge/-Plotly-3F4F75?logo=plotly&logoColor=white) |
+| ⚙️ **Backend** | ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white) ![FastAPI](https://img.shields.io/badge/-FastAPI-009688?logo=fastapi&logoColor=white) ![Pydantic](https://img.shields.io/badge/-Pydantic-E92063?logo=pydantic&logoColor=white) |
+| 🗄️ **Database** | ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?logo=postgresql&logoColor=white) ![SQLAlchemy](https://img.shields.io/badge/-SQLAlchemy-D71F00?logo=sqlalchemy&logoColor=white) ![Alembic](https://img.shields.io/badge/-Alembic-6BA81E) |
+| 🤖 **AI / ML** | ![OpenAI](https://img.shields.io/badge/-OpenAI_API-412991?logo=openai&logoColor=white) ![spaCy](https://img.shields.io/badge/-spaCy-09A3D5?logo=spacy&logoColor=white) ![scikit-learn](https://img.shields.io/badge/-scikit--learn-F7931E?logo=scikitlearn&logoColor=white) ![Pandas](https://img.shields.io/badge/-Pandas-150458?logo=pandas&logoColor=white) |
 
 </div>
 
@@ -294,55 +294,57 @@ erDiagram
 
 ```text
 career-copilot-ai/
-├── 📁 client/                         # React + Vite frontend
-│   ├── 📁 public/
-│   ├── 📁 src/
-│   │   ├── 📁 assets/
-│   │   ├── 📁 components/             # Shared UI components
-│   │   ├── 📁 features/
-│   │   │   ├── 📁 resume/             # Analyzer, ATS checker, suggestions
-│   │   │   ├── 📁 roadmap/            # Career roadmap generator
-│   │   │   ├── 📁 placement/          # Dashboard, DSA, aptitude
-│   │   │   ├── 📁 interview/          # Question generator, mock interviews
-│   │   │   ├── 📁 jobs/               # Internship & job recommendations
-│   │   │   ├── 📁 chatbot/            # Career assistant
-│   │   │   └── 📁 analytics/          # Progress dashboard
-│   │   ├── 📁 hooks/
-│   │   ├── 📁 layouts/
-│   │   ├── 📁 pages/
-│   │   ├── 📁 services/               # API clients
-│   │   ├── 📁 store/
-│   │   ├── 📄 App.jsx
-│   │   └── 📄 main.jsx
-│   ├── 📄 tailwind.config.js
-│   ├── 📄 vite.config.js
-│   └── 📄 package.json
-│
-├── 📁 server/                         # Node.js + Express backend
-│   ├── 📁 src/
-│   │   ├── 📁 config/
-│   │   ├── 📁 controllers/
-│   │   ├── 📁 middleware/             # Auth, validation, rate limiting
-│   │   ├── 📁 models/
-│   │   ├── 📁 routes/
-│   │   ├── 📁 services/
-│   │   │   ├── 📄 resume.service.js
-│   │   │   ├── 📄 roadmap.service.js
-│   │   │   ├── 📄 interview.service.js
-│   │   │   ├── 📄 recommendation.service.js
-│   │   │   └── 📄 openai.service.js
-│   │   ├── 📁 ml/                     # NLP & ML utilities
-│   │   ├── 📁 utils/
-│   │   ├── 📄 app.js
-│   │   └── 📄 server.js
+├── 📁 app/                            # FastAPI backend
+│   ├── 📄 main.py                     # Application entry point
+│   ├── 📁 api/
+│   │   ├── 📄 deps.py                 # Shared dependencies (auth, db session)
+│   │   └── 📁 routes/
+│   │       ├── 📄 auth.py
+│   │       ├── 📄 resume.py           # Analyzer, ATS checker, suggestions
+│   │       ├── 📄 roadmap.py          # Career roadmap generator
+│   │       ├── 📄 placement.py        # Dashboard, DSA, aptitude
+│   │       ├── 📄 interview.py        # Question generator, mock interviews
+│   │       ├── 📄 jobs.py             # Internship & job recommendations
+│   │       └── 📄 chatbot.py          # Career assistant
+│   ├── 📁 core/
+│   │   ├── 📄 config.py               # Settings (pydantic-settings)
+│   │   └── 📄 security.py             # JWT & password hashing
 │   ├── 📁 db/
-│   │   ├── 📁 migrations/
-│   │   └── 📁 seeds/
-│   └── 📄 package.json
+│   │   ├── 📄 base.py
+│   │   ├── 📄 session.py
+│   │   └── 📁 migrations/             # Alembic migrations
+│   ├── 📁 models/                     # SQLAlchemy models
+│   ├── 📁 schemas/                    # Pydantic schemas
+│   ├── 📁 services/
+│   │   ├── 📄 openai_service.py       # LLM integration
+│   │   ├── 📄 resume_service.py
+│   │   ├── 📄 roadmap_service.py
+│   │   ├── 📄 interview_service.py
+│   │   └── 📄 recommendation_service.py
+│   └── 📁 ml/
+│       ├── 📄 nlp_pipeline.py         # spaCy skill & keyword extraction
+│       ├── 📄 ats_scorer.py           # TF-IDF + similarity scoring
+│       └── 📄 skill_gap.py
 │
+├── 📁 frontend/                       # Streamlit UI
+│   ├── 📄 Home.py
+│   ├── 📁 pages/
+│   │   ├── 📄 1_Resume_Analyzer.py
+│   │   ├── 📄 2_Career_Roadmap.py
+│   │   ├── 📄 3_Placement_Dashboard.py
+│   │   ├── 📄 4_Mock_Interview.py
+│   │   ├── 📄 5_Job_Recommendations.py
+│   │   ├── 📄 6_Career_Chatbot.py
+│   │   └── 📄 7_Analytics.py
+│   ├── 📁 components/
+│   └── 📄 api_client.py
+│
+├── 📁 tests/
 ├── 📁 docs/
 │   └── 📁 screenshots/
 ├── 📄 .env.example
+├── 📄 requirements.txt
+├── 📄 alembic.ini
 ├── 📄 CONTRIBUTING.md
 ├── 📄 LICENSE
 └── 📄 README.md
@@ -358,8 +360,8 @@ career-copilot-ai/
 
 | Requirement | Version |
 |:---|:---|
-| 🟢 Node.js | `v18+` |
-| 📦 npm / yarn | Latest |
+| 🐍 Python | `3.10+` |
+| 📦 pip | Latest |
 | 🐘 PostgreSQL | `v14+` |
 | 🔑 OpenAI API Key | [Get one here](https://platform.openai.com/api-keys) |
 
@@ -376,7 +378,32 @@ cd career-copilot-ai
 </details>
 
 <details open>
-<summary><b>2️⃣ Create the database</b></summary>
+<summary><b>2️⃣ Create & activate a virtual environment</b></summary>
+
+```bash
+# macOS / Linux
+python -m venv venv
+source venv/bin/activate
+
+# Windows
+python -m venv venv
+venv\Scripts\activate
+```
+
+</details>
+
+<details open>
+<summary><b>3️⃣ Install dependencies</b></summary>
+
+```bash
+pip install -r requirements.txt
+python -m spacy download en_core_web_sm
+```
+
+</details>
+
+<details open>
+<summary><b>4️⃣ Create the database</b></summary>
 
 ```bash
 psql -U postgres -c "CREATE DATABASE career_copilot;"
@@ -385,54 +412,70 @@ psql -U postgres -c "CREATE DATABASE career_copilot;"
 </details>
 
 <details open>
-<summary><b>3️⃣ Set up the backend</b></summary>
+<summary><b>5️⃣ Configure environment variables</b></summary>
 
 ```bash
-cd server
-npm install
-cp .env.example .env      # add your environment variables
-npm run migrate           # run database migrations
-npm run seed              # optional: load sample data
-npm run dev               # http://localhost:5000
+cp .env.example .env      # Windows: copy .env.example .env
+```
+
+Then edit `.env` with your values (see [Environment Variables](#-environment-variables)).
+
+</details>
+
+<details open>
+<summary><b>6️⃣ Run database migrations</b></summary>
+
+```bash
+alembic upgrade head
 ```
 
 </details>
 
 <details open>
-<summary><b>4️⃣ Set up the frontend</b></summary>
+<summary><b>7️⃣ Start the backend (FastAPI)</b></summary>
 
 ```bash
-cd ../client
-npm install
-cp .env.example .env
-npm run dev               # http://localhost:5173
+uvicorn app.main:app --reload --port 8000
+```
+
+API docs available at **http://localhost:8000/docs** 📘
+
+</details>
+
+<details open>
+<summary><b>8️⃣ Start the frontend (Streamlit)</b></summary>
+
+Open a new terminal (with the virtual environment activated):
+
+```bash
+streamlit run frontend/Home.py
+```
+
+🎉 Open **http://localhost:8501** and start building your career!
+
+</details>
+
+<details>
+<summary><b>🐳 Run with Docker (optional)</b></summary>
+
+```bash
+docker compose up --build
 ```
 
 </details>
 
-🎉 Open **http://localhost:5173** and start building your career!
-
 <details>
-<summary><b>🏭 Production build</b></summary>
-
-```bash
-cd client && npm run build
-cd ../server && NODE_ENV=production npm start
-```
-
-</details>
-
-<details>
-<summary><b>🧪 Available scripts</b></summary>
+<summary><b>🧪 Useful commands</b></summary>
 
 | Command | Description |
 |:---|:---|
-| `npm run dev` | Start the development server |
-| `npm run build` | Build for production |
-| `npm run migrate` | Run database migrations |
-| `npm run seed` | Seed sample data |
-| `npm run lint` | Lint the codebase |
-| `npm test` | Run tests |
+| `uvicorn app.main:app --reload` | Run the API in development mode |
+| `streamlit run frontend/Home.py` | Run the Streamlit UI |
+| `alembic revision --autogenerate -m "msg"` | Create a new migration |
+| `alembic upgrade head` | Apply migrations |
+| `pytest` | Run the test suite |
+| `ruff check .` | Lint the codebase |
+| `black .` | Format the codebase |
 
 </details>
 
@@ -441,21 +484,23 @@ cd ../server && NODE_ENV=production npm start
 ## 🔐 Environment Variables
 
 <details open>
-<summary><b>⚙️ Server — <code>server/.env</code></b></summary>
+<summary><b>⚙️ <code>.env</code></b></summary>
 <br/>
 
 ```env
-# ── Server ─────────────────────────────
-PORT=5000
-NODE_ENV=development
-CLIENT_URL=http://localhost:5173
+# ── App ────────────────────────────────
+APP_ENV=development
+API_HOST=0.0.0.0
+API_PORT=8000
+API_URL=http://localhost:8000
+FRONTEND_URL=http://localhost:8501
 
 # ── Database ───────────────────────────
-DATABASE_URL=postgresql://postgres:password@localhost:5432/career_copilot
+DATABASE_URL=postgresql+psycopg2://postgres:password@localhost:5432/career_copilot
 
 # ── Authentication ─────────────────────
-JWT_SECRET=your_super_secret_key
-JWT_EXPIRES_IN=7d
+SECRET_KEY=your_super_secret_key
+ACCESS_TOKEN_EXPIRE_MINUTES=10080
 
 # ── AI ─────────────────────────────────
 OPENAI_API_KEY=your_openai_api_key
@@ -467,27 +512,17 @@ MAX_FILE_SIZE_MB=5
 
 </details>
 
-<details open>
-<summary><b>🎨 Client — <code>client/.env</code></b></summary>
-<br/>
-
-```env
-VITE_API_URL=http://localhost:5000/api
-```
-
-</details>
-
 | Variable | Required | Description |
 |:---|:---:|:---|
-| `PORT` | ✅ | Backend server port |
-| `DATABASE_URL` | ✅ | PostgreSQL connection string |
-| `JWT_SECRET` | ✅ | Secret used to sign auth tokens |
+| `DATABASE_URL` | ✅ | PostgreSQL connection string (SQLAlchemy format) |
+| `SECRET_KEY` | ✅ | Secret used to sign JWT tokens |
 | `OPENAI_API_KEY` | ✅ | OpenAI API key for AI features |
-| `OPENAI_MODEL` | ➖ | Model used for generation (default shown above) |
-| `CLIENT_URL` | ✅ | Allowed frontend origin (CORS) |
-| `VITE_API_URL` | ✅ | API base URL used by the client |
+| `OPENAI_MODEL` | ➖ | Model used for generation |
+| `API_URL` | ✅ | Backend URL used by the Streamlit client |
+| `FRONTEND_URL` | ✅ | Allowed frontend origin (CORS) |
+| `MAX_FILE_SIZE_MB` | ➖ | Maximum resume upload size |
 
-> ⚠️ **Never commit your `.env` files.** Keep API keys and secrets private.
+> ⚠️ **Never commit your `.env` file.** Keep API keys and secrets private.
 
 ---
 
@@ -506,7 +541,7 @@ VITE_API_URL=http://localhost:5000/api
 | **5** | 🎤 Interview Generator & Mock Interviews | `████░░░░░░` 40% | 🚧 In Progress |
 | **6** | 💼 Job & Internship Recommendations | `███░░░░░░░` 30% | 🛠️ Building |
 | **7** | 📊 Advanced Analytics & Chatbot | `██░░░░░░░░` 20% | 🛠️ Building |
-| **8** | 📱 Mobile App (React Native) | `░░░░░░░░░░` 0% | 📅 Planned |
+| **8** | 🌐 Production Web Frontend | `░░░░░░░░░░` 0% | 📅 Planned |
 | **9** | 🏫 College & Recruiter Portals | `░░░░░░░░░░` 0% | 📅 Planned |
 
 </details>
@@ -526,7 +561,7 @@ VITE_API_URL=http://localhost:5000/api
 - [ ] Voice-based mock interviews
 - [ ] LinkedIn profile optimizer
 - [ ] Multi-language support
-- [ ] Mobile app
+- [ ] Docker & CI/CD pipeline
 
 </details>
 
@@ -570,15 +605,19 @@ Contributions are what make the open-source community thrive. Any contribution y
    git checkout -b feature/amazing-feature
    ```
 3. 💻 **Make your changes** and add tests where applicable
-4. ✅ **Commit** using [Conventional Commits](https://www.conventionalcommits.org/)
+4. 🧹 **Format & lint** your code
+   ```bash
+   black . && ruff check .
+   ```
+5. ✅ **Run tests**
+   ```bash
+   pytest
+   ```
+6. 📝 **Commit** using [Conventional Commits](https://www.conventionalcommits.org/)
    ```bash
    git commit -m "feat: add amazing feature"
    ```
-5. 📤 **Push** to your branch
-   ```bash
-   git push origin feature/amazing-feature
-   ```
-6. 🔀 **Open a Pull Request** describing your changes
+7. 📤 **Push** and open a **Pull Request** describing your changes
 
 </details>
 
@@ -586,7 +625,8 @@ Contributions are what make the open-source community thrive. Any contribution y
 <summary><b>📐 Guidelines</b></summary>
 <br/>
 
-- ✔️ Follow the existing code style and run `npm run lint` before committing
+- ✔️ Follow [PEP 8](https://peps.python.org/pep-0008/) and use type hints where possible
+- ✔️ Format with `black` and lint with `ruff` before committing
 - ✔️ Write clear commit messages and PR descriptions
 - ✔️ Add or update tests for new functionality
 - ✔️ Update documentation when behavior changes
@@ -629,7 +669,7 @@ The open-source code is free under the MIT license. If you self-host, you'll onl
 <summary><b>🎯 How is the ATS score calculated?</b></summary>
 <br/>
 
-The NLP pipeline extracts skills, keywords, and structure from your resume, and ML scoring compares them against the target job description. The score reflects keyword match, formatting, section completeness, and impact language.
+The spaCy NLP pipeline extracts skills, keywords, and structure from your resume. scikit-learn then compares them against the target job description using TF-IDF and cosine similarity, combined with checks for formatting, section completeness, and impact language.
 
 </details>
 
@@ -637,7 +677,7 @@ The NLP pipeline extracts skills, keywords, and structure from your resume, and 
 <summary><b>🔒 Is my resume data private?</b></summary>
 <br/>
 
-Your data is stored in your own PostgreSQL database when self-hosting and is never used for anything beyond providing platform features. Review the OpenAI API data usage policy for details on AI processing.
+When self-hosting, your data is stored in your own PostgreSQL database and is only used to provide platform features. Review the OpenAI API data usage policy for details on AI processing.
 
 </details>
 
@@ -645,15 +685,15 @@ Your data is stored in your own PostgreSQL database when self-hosting and is nev
 <summary><b>🤖 Which AI models does it use?</b></summary>
 <br/>
 
-It uses the OpenAI API for generation, configurable via `OPENAI_MODEL`, combined with custom NLP and ML components for parsing, scoring, and recommendations.
+It uses the OpenAI API for generation (configurable via `OPENAI_MODEL`), combined with custom spaCy and scikit-learn components for parsing, scoring, and recommendations.
 
 </details>
 
 <details>
-<summary><b>🎓 Can colleges or training institutes use it?</b></summary>
+<summary><b>🐍 Which Python version is required?</b></summary>
 <br/>
 
-Yes. A college and recruiter portal is on the roadmap. You can also self-host the platform for your institution today.
+Python **3.10 or higher** is recommended.
 
 </details>
 
@@ -661,7 +701,7 @@ Yes. A college and recruiter portal is on the roadmap. You can also self-host th
 <summary><b>🛠️ Can I use a different AI provider?</b></summary>
 <br/>
 
-The AI logic lives in `server/src/services/openai.service.js`, so you can swap in another provider by implementing the same interface.
+Yes. The AI logic lives in `app/services/openai_service.py`, so you can swap in another provider by implementing the same interface.
 
 </details>
 
@@ -719,6 +759,7 @@ SOFTWARE.
 
 <br/>
 
+[![Made with Python](https://img.shields.io/badge/Made%20with-Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
 [![Made with Love](https://img.shields.io/badge/Made%20with-%E2%9D%A4%EF%B8%8F-6366F1?style=for-the-badge)](https://github.com/your-username/career-copilot-ai)
 [![Powered by OpenAI](https://img.shields.io/badge/Powered%20by-OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com)
 
